@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fundamental Exercise 2</string>
+    <string name="simon_egorov">Simon Egorov</string>
+    <string name="button_text">Send email</string>
+    <string name="bullet_point1">Nice guy</string>
+    <string name="bullet_point2">I go gim</string>
+    <string name="bullet_point3">Has friends</string>
+    <string name="about_person">I work as a cook at a restaurant named Villa Lilla, which is located near Leppavaara station. Villa Lilla is a part of the big restaurant group called Muru dining. There are 6 other restaurants in this group, for example Muru and Finnjavel salonki that has the Michelin star.</string>
+    <string name="enter_message_here">Enter message here…</string>
+    <string name="simons_email_adress">semyon142000@gmail.com</string>
+    <string name="subject_of_email">Question to my beloved Simonchik</string>
+    <string name="no_email_app_found">No email apps found:(</string>
+    <string name="no_browser_found">No browser found:(</string>
+</resources>
