@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AboutMeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/name"
@@ -17,125 +17,118 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/simon_egorov"
-            android:textSize="30sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/profile_image"
+            android:id="@+id/profileImage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
             android:adjustViewBounds="true"
             android:src="@drawable/simon_pic"
-            app:layout_constraintEnd_toEndOf="@id/content_start"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             tools:ignore="ContentDescription" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/content_start"
+            android:id="@+id/contentStart"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="770dp" />
+            app:layout_constraintGuide_begin="30dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/content_end"
+            android:id="@+id/contentEnd"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
             app:layout_constraintGuide_end="30dp" />
 
         <ImageView
-            android:id="@+id/check_icon1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/checkIcon1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/check_icon2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/checkIcon2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/check_icon1"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/checkIcon1"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/check_icon3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/checkIcon3"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/check_icon2"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/checkIcon2"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
 
         <TextView
-            android:id="@+id/bullet_point_text1"
+            android:id="@+id/bulletPointText1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
             android:text="@string/bullet_point1"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon1"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkIcon1"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintStart_toEndOf="@+id/checkIcon1"
+            app:layout_constraintTop_toTopOf="@+id/checkIcon1" />
 
 
         <TextView
-            android:id="@+id/bullet_point_text2"
+            android:id="@+id/bulletPointText2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
             android:text="@string/bullet_point2"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon2"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text1" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkIcon2"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintStart_toEndOf="@+id/checkIcon2"
+            app:layout_constraintTop_toTopOf="@+id/checkIcon2" />
 
         <TextView
-            android:id="@+id/bullet_point_text3"
+            android:id="@+id/bulletPointText3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
             android:text="@string/bullet_point3"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon3"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text2" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkIcon3"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintStart_toEndOf="@+id/checkIcon3"
+            app:layout_constraintTop_toTopOf="@+id/checkIcon3" />
 
         <TextView
-            android:id="@+id/about_person_text"
+            android:id="@+id/aboutPersonText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/about_person"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text3" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/bulletPointText3" />
 
         <EditText
-            android:id="@+id/message_field"
+            android:id="@+id/messageField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -143,60 +136,55 @@
             android:hint="@string/enter_message_here"
             android:importantForAutofill="no"
             android:inputType="none"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/about_person_text"
-            tools:ignore="TouchTargetSizeCheck"
-            android:textSize="30sp"/>
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/aboutPersonText"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/email_button"
+            android:id="@+id/emailButton"
             style="?attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/button_text"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintTop_toBottomOf="@+id/message_field" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintTop_toBottomOf="@+id/messageField" />
 
 
         <ImageView
             android:id="@+id/social1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/telegram_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/social2"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/email_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailButton"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/social2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginHorizontal="15dp"
             android:src="@drawable/insta_icon"
             app:layout_constraintBottom_toBottomOf="@+id/social1"
             app:layout_constraintEnd_toStartOf="@+id/social3"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/social1"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/social3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:src="@drawable/whatsapp_icon"
             app:layout_constraintBottom_toBottomOf="@+id/social2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/social2"
             tools:ignore="ContentDescription" />
 

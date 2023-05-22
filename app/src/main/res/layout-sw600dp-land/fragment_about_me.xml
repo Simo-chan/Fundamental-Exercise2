@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AboutMeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,117 +23,119 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/profile_image"
+            android:id="@+id/profileImage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:adjustViewBounds="true"
             android:src="@drawable/simon_pic"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/contentStart"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             tools:ignore="ContentDescription" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/content_start"
+            android:id="@+id/contentStart"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
             app:layout_constraintGuide_end="770dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/content_end"
+            android:id="@+id/contentEnd"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"
             app:layout_constraintGuide_end="30dp" />
 
         <ImageView
-            android:id="@+id/check_icon1"
+            android:id="@+id/checkIcon1"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/profile_image"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/check_icon2"
+            android:id="@+id/checkIcon2"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/check_icon1"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/checkIcon1"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/check_icon3"
+            android:id="@+id/checkIcon3"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/check_icon2"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/checkIcon2"
             app:srcCompat="@drawable/ic_baseline_check_24"
             tools:ignore="ContentDescription" />
 
 
         <TextView
-            android:id="@+id/bullet_point_text1"
+            android:id="@+id/bulletPointText1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/bullet_point1"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon1"
-            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+            app:layout_constraintStart_toEndOf="@+id/checkIcon1"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/bullet_point_text2"
+            android:id="@+id/bulletPointText2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/bullet_point2"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon2"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text1" />
+            app:layout_constraintStart_toEndOf="@+id/checkIcon2"
+            app:layout_constraintTop_toBottomOf="@+id/bulletPointText1" />
 
         <TextView
-            android:id="@+id/bullet_point_text3"
+            android:id="@+id/bulletPointText3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/bullet_point3"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/check_icon3"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text2" />
+            app:layout_constraintStart_toEndOf="@+id/checkIcon3"
+            app:layout_constraintTop_toBottomOf="@+id/bulletPointText2" />
 
         <TextView
-            android:id="@+id/about_person_text"
+            android:id="@+id/aboutPersonText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/about_person"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/bullet_point_text3" />
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/bulletPointText3" />
 
         <EditText
-            android:id="@+id/message_field"
+            android:id="@+id/messageField"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -141,23 +143,23 @@
             android:hint="@string/enter_message_here"
             android:importantForAutofill="no"
             android:inputType="none"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/about_person_text"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/aboutPersonText"
             tools:ignore="TouchTargetSizeCheck"
             android:textSize="30sp"/>
 
         <Button
-            android:id="@+id/email_button"
+            android:id="@+id/emailButton"
             style="?attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/button_text"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@id/content_end"
-            app:layout_constraintTop_toBottomOf="@+id/message_field" />
+            app:layout_constraintEnd_toEndOf="@id/contentEnd"
+            app:layout_constraintTop_toBottomOf="@+id/messageField" />
 
 
         <ImageView
@@ -171,8 +173,8 @@
             app:layout_constraintEnd_toStartOf="@+id/social2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_button"
+            app:layout_constraintStart_toStartOf="@id/contentStart"
+            app:layout_constraintTop_toBottomOf="@+id/emailButton"
             tools:ignore="ContentDescription" />
 
         <ImageView

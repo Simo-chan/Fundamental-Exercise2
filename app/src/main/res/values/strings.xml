@@ -11,4 +11,7 @@
     <string name="subject_of_email">Question to my beloved Simonchik</string>
     <string name="no_email_app_found">No email apps found:(</string>
     <string name="no_browser_found">No browser found:(</string>
+    <string name="about_author">About author</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
