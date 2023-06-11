@@ -14,8 +14,6 @@
         android:layout_margin="5dp"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/items_of_recyclerview" />
 </LinearLayout>

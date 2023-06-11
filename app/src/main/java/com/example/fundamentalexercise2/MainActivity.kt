@@ -3,24 +3,20 @@ package com.example.fundamentalexercise2
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
 
-    private var fragmentContainer: FrameLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fragmentContainer = findViewById(R.id.fragmentContainer)
-
         val fragment = NewsListFragment()
         supportFragmentManager.beginTransaction()
-            .replace(fragmentContainer!!.id, fragment)
-            .addToBackStack("null")
+            .replace(R.id.fragmentContainer, fragment)
+            .addToBackStack(null)
             .commit()
 
     }
@@ -34,8 +30,8 @@ class MainActivity : AppCompatActivity() {
         val fragment = AboutMeFragment()
         when (item.itemId) {
             R.id.aboutAuthorMenu -> supportFragmentManager.beginTransaction()
-                .replace(fragmentContainer!!.id, fragment)
-                .addToBackStack("null")
+                .replace(R.id.fragmentContainer, fragment)
+                .addToBackStack(null)
                 .commit()
         }
         return super.onOptionsItemSelected(item)

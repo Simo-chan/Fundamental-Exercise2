@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:text="Tourist filmed himself shitting on public in pants" />
 
@@ -43,7 +43,7 @@
             android:id="@+id/newsText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:layout_margin="8dp"
             tools:text="@string/about_person"/>
     </LinearLayout>

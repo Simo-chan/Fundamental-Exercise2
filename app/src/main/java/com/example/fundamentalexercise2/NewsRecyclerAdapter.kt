@@ -38,6 +38,12 @@ class NewsRecyclerAdapter : RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder>
             .into(holder.headingImage)
     }
 
+    override fun onViewRecycled(holder: ViewHolder) {
+        Glide.with(holder.headingImage).clear(holder.headingImage)
+        super.onViewRecycled(holder)
+    }
+
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val headingImage: ImageView = itemView.findViewById(R.id.headingImage)
         private val category: TextView = itemView.findViewById(R.id.categoryText)
@@ -50,13 +56,10 @@ class NewsRecyclerAdapter : RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder>
             title.text = news.title
             previewText.text = news.previewText
             date.text = news.publishDate.toString()
+
+            itemView.setOnClickListener { onItemClick?.invoke(news) }
         }
 
-        init {
-            itemView.setOnClickListener {
-                onItemClick?.invoke(newsDataSet[absoluteAdapterPosition])
-            }
-        }
 
     }
 }

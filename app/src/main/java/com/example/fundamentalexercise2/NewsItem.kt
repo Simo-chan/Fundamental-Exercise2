@@ -10,9 +10,9 @@ data class NewsItem(
     val publishDate: Date,
     val previewText: String,
     val fullText: String
-)
+):java.io.Serializable
 
 data class Category(
     val id: Int,
     val name: String
-)
+):java.io.Serializable
