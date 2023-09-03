@@ -1,4 +1,4 @@
-package com.example.fundamentalexercise2
+package com.example.fundamentalexercise2.recyclerview
 
 import androidx.recyclerview.widget.DiffUtil
 

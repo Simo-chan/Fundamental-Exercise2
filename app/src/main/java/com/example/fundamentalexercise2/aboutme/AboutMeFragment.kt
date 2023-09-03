@@ -1,4 +1,4 @@
-package com.example.fundamentalexercise2
+package com.example.fundamentalexercise2.aboutme
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.fundamentalexercise2.R
 
 class AboutMeFragment : Fragment(R.layout.fragment_about_me) {
 

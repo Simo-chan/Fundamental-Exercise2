@@ -1,4 +1,4 @@
-package com.example.fundamentalexercise2
+package com.example.fundamentalexercise2.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,18 +8,21 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.fundamentalexercise2.R
 
 
 class NewsRecyclerAdapter : RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder>() {
 
     var onItemClick: ((NewsItem) -> Unit)? = null
-    var newsDataSet = emptyList<NewsItem>()
-        set(value) {
-            val newsDiffUtil = NewsDiffUtilCallBack(field, value)
-            val diffResult = DiffUtil.calculateDiff(newsDiffUtil)
-            diffResult.dispatchUpdatesTo(this)
-            field = value
-        }
+    private var newsDataSet = emptyList<NewsItem>()
+
+    fun updateNewsDataset(newsData: List<NewsItem>) {
+        val newsDiffUtil = NewsDiffUtilCallBack(newsDataSet, newsData)
+        val diffResult = DiffUtil.calculateDiff(newsDiffUtil)
+        diffResult.dispatchUpdatesTo(this)
+        newsDataSet = newsData
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -52,7 +55,7 @@ class NewsRecyclerAdapter : RecyclerView.Adapter<NewsRecyclerAdapter.ViewHolder>
         private val date: TextView = itemView.findViewById(R.id.publishDate)
 
         fun bind(news: NewsItem) {
-            category.text = news.category.name
+            category.text = news.category
             title.text = news.title
             previewText.text = news.previewText
             date.text = news.publishDate.toString()
